@@ -203,4 +203,3 @@ const paymentFail = async (req, res) => {
 
 module.exports = { order, paymentSuccess, paymentFail }
 
-// masum
