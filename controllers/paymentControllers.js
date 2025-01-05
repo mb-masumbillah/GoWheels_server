@@ -167,8 +167,8 @@ const paymentSuccess = async (req, res) => {
             return res.redirect(`http://localhost:5173/payment/success/${req.params?.tranId}`);
             
             // Send the hardcoded email
-            await sendEmail(
-                'masumbillah2062003@gmail.com',
+            await sendEmail( 
+                'farzana.hossain147@gmail.com',
                 'John Doe',
                 'car123',
                 'Tesla Model S',
