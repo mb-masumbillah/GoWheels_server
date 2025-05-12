@@ -7,7 +7,6 @@ const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const carRoute = require('./routes/carRoutes');
 const reviewsAndRatingsRoute = require('./routes/reviewAndRatingRoutes');
-// No need to import agency here yet, we will handle it after io initialization
 const bookingRoute = require('./routes/userBookingRoutes');
 const payment = require('./routes/payment');
 const feedbacksRoute = require('./routes/feedbackRoute');
