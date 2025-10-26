@@ -29,8 +29,8 @@ const io = socketIO(server, {
             'http://localhost:5175',
             'https://gowheels-99.web.app',
         ],
-        credentials: true,  // Allow cookies and credentials
-        methods: ["GET", "POST"],  // You can specify which HTTP methods are allowed
+        credentials: true,  
+        methods: ["GET", "POST"],  
     }
 });
 
@@ -70,7 +70,7 @@ app.use('/api/authorization', authRoutes);
 app.use('/api/usersRoute', userRoutes);
 app.use('/api/carsRoute', carRoute);
 app.use('/api/reviewsRoute', reviewsAndRatingsRoute);
-app.use('/api/agencyRoute', agency); // Now agency route works with io
+app.use('/api/agencyRoute', agency);
 app.use('/api/bookings', bookingRoute);
 app.use('/api/payment', payment);
 app.use('/api/feedbackRoute', feedbacksRoute);

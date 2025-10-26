@@ -171,8 +171,8 @@ const updateAgencyOwnerInfo = async (req, res) => {
         ...(phone && { phone }),
         ...(nid && { nid }),
         ...(dateOfBirth && { dateOfBirth }),
-        ...(gender && { gender }), // Ensure these are included
-        ...(image && { image }), // Ensure these are included
+        ...(gender && { gender }), 
+        ...(image && { image }),
         ...(division && { "userAddress.division": division }),
         ...(district && { "userAddress.district": district }),
         ...(upazilla && { "userAddress.upazilla": upazilla }),
@@ -194,73 +194,6 @@ const updateAgencyOwnerInfo = async (req, res) => {
   }
 };
 
-// ADD VEHICLE FROM AGENCY OWNER DASHBOARD
-// const addVehicleByAgency = async (req, res) => {
-//     try {
-//       const db = await connectDB();
-//       const collection = db.collection("vehiclesData");
-
-//       // Extract vehicle data from the request body
-//       const {
-//         licenseNumber,
-//         avatar,
-//         seat,
-//         mileage,
-//         gear,
-//         fuel,
-//         rentalPrice,
-//         transmission,
-//         brand,
-//         model,
-//         buildYear,
-//         expireDate,
-//         fitnessCertificate,
-//         issuingAuthority,
-//         insuranceNumber,
-//         insurancePeriod,
-//         insuranceDetails,
-//       } = req.body;
-
-//       // Create the new vehicle object
-//       const newVehicle = {
-//         licenseNumber,
-//         avatar,
-//         seat,
-//         mileage,
-//         gear,
-//         fuel,
-//         rentalPrice,
-//         transmission,
-//         brand,
-//         model,
-//         buildYear,
-//         expireDate,
-//         fitnessCertificate,
-//         issuingAuthority,
-//         insuranceNumber,
-//         insurancePeriod,
-//         insuranceDetails,
-//         addedAt: new Date(), // Timestamp of when the vehicle is added
-//       };
-
-//       // Insert the new vehicle into the collection
-//       const result = await collection.insertOne(newVehicle);
-
-//       // Send a success response
-//       res.status(201).json({
-//         message: "Vehicle added successfully",
-//         vehicleId: result.insertedId,
-//         data: newVehicle,
-//       });
-
-//     } catch (error) {
-//       console.error("Error adding vehicle:", error);
-//       res.status(500).json({
-//         message: "Failed to add vehicle",
-//         error: error.message,
-//       });
-//     }
-//   };
 
 const addVehicleByAgency = async (req, res, io) => {
   try {
